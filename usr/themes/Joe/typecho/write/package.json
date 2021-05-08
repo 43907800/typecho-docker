@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "serve": "rollup -c -w"
+  },
+  "dependencies": {
+    "@codemirror/closebrackets": "^0.18.0",
+    "@codemirror/commands": "^0.18.2",
+    "@codemirror/highlight": "^0.18.3",
+    "@codemirror/history": "^0.18.1",
+    "@codemirror/lang-markdown": "^0.18.2",
+    "@codemirror/matchbrackets": "^0.18.0",
+    "@codemirror/state": "^0.18.7",
+    "@codemirror/view": "^0.18.11",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
+}
