@@ -16,7 +16,7 @@ RUN  apk --update --no-cache add wget  unzip && \
 
   cp -a /usr/src/typecho/typecho-master/* /var/www/html/  && \
   cp -a /usr/src/typecho/Joe-master/* /var/www/html/usr/themes/  && \
-  cp -a /usr/src/typecho/WangStyle-master/* /var/www/html/usr/plugins/  && \
+  cp -a /usr/src/typecho/WangStyle-main/* /var/www/html/usr/plugins/  && \
 
   rm -rf /tmp/*
 
