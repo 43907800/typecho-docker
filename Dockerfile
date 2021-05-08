@@ -6,20 +6,16 @@ WORKDIR /var/www/html
 RUN  apk --update --no-cache add wget  unzip && \   
   docker-php-ext-install pdo pdo_mysql bcmath  && \ 
   mkdir -p /usr/src/typecho &&\  
-  wget  https://github.com/typecho/typecho/archive/master.zip -O typecho.zip && \  
-  wget  https://github.com/HaoOuBa/Joe/archive/refs/heads/master.zip -O Joe.zip && \
-  wget  https://github.com/dinphy/WangStyle/archive/refs/heads/main.zip -O WangStyle.zip && \
-
+  wget  https://download.fastgit.org/typecho/typecho/archive/master.zip -O typecho.zip && \  
+  wget  https://download.fastgit.org/HaoOuBa/Joe/archive/refs/heads/master.zip -O Joe.zip && \
+  wget  https://download.fastgit.org/dinphy/WangStyle/archive/refs/heads/main.zip -O WangStyle.zip && \
   unzip -d /usr/src/typecho/ typecho.zip && \
   unzip -d /usr/src/typecho/ Joe.zip && \
   unzip -d /usr/src/typecho/ WangStyle.zip && \
-
   cp -a /usr/src/typecho/typecho-master/* /var/www/html/  && \
   cp -a /usr/src/typecho/Joe-master/* /var/www/html/usr/themes/  && \
   cp -a /usr/src/typecho/WangStyle-main/* /var/www/html/usr/plugins/  && \
-
   rm -rf /tmp/*
-
 
 VOLUME /var/www/html 
 EXPOSE 80    
